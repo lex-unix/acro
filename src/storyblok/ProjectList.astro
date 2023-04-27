@@ -12,26 +12,53 @@ const projects: Project[] = data.stories.map((story: any) => ({
   name: story.content.name,
   location: story.content.location,
   architects: story.content.architects,
-  img: story.content.cover,
+  cover: story.content.cover,
   slug: story.full_slug
 }))
 
 const { blok } = Astro.props
 ---
 
-<ul class="grid grid-cols-1 md:grid-cols-3" {...storyblokEditable(blok)}>
+<ul
+  class="grid grid-cols-[repeat(auto-fill,minmax(300px,1fr))] gap-6"
+  {...storyblokEditable(blok)}
+>
   {
     projects.map(project => (
-      <li>
-        {project.img && (
+      <li class="">
+        <a href={project.slug}>
           <img
-            src={project.img.filename}
-            alt={project.img.alt}
-            class="aspect-[3/2] w-[360px] rounded object-cover"
+            src={project.cover.filename}
+            alt={project.cover.alt}
+            class="aspect-square w-full rounded object-cover"
+          />
+        </a>
+        <div class="pt-2.5">
+          <p class="line-clamp-1 opacity-50">
+            {project.architects} &bull; {project.location}
+          </p>
+          <a
+            href={project.slug}
+            class="hover:underline hover:underline-offset-2"
+          >
+            {project.name}
+          </a>
+        </div>
+      </li>
+    ))
+  }
+  {
+    projects.map(project => (
+      <li class="">
+        {project.cover && (
+          <img
+            src={project.cover.filename}
+            alt={project.cover.alt}
+            class="aspect-square w-full rounded object-cover"
           />
         )}
         <div class="pt-2.5">
-          <p class="opacity-50">
+          <p class="line-clamp-1 opacity-50">
             {project.architects} &bull; {project.location}
           </p>
           <a
