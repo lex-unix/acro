@@ -10,7 +10,10 @@ export default defineConfig({
     tailwind(),
     storyblok({
       accessToken: env.STORYBLOK_TOKEN,
-      components: {}
+      components: {
+        projectList: 'storyblok/ProjectList',
+        page: 'storyblok/Page'
+      }
     })
   ]
 })
