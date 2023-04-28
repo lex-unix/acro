@@ -47,28 +47,4 @@ const { blok } = Astro.props
       </li>
     ))
   }
-  {
-    projects.map(project => (
-      <li class="">
-        {project.cover && (
-          <img
-            src={project.cover.filename}
-            alt={project.cover.alt}
-            class="aspect-square w-full rounded object-cover"
-          />
-        )}
-        <div class="pt-2.5">
-          <p class="line-clamp-1 opacity-50">
-            {project.architects} &bull; {project.location}
-          </p>
-          <a
-            href={project.slug}
-            class="hover:underline hover:underline-offset-2"
-          >
-            {project.name}
-          </a>
-        </div>
-      </li>
-    ))
-  }
 </ul>

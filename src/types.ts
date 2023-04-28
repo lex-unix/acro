@@ -1,15 +1,17 @@
-import type { ISbResult } from '@storyblok/astro'
+import type { ISbRichtext } from '@storyblok/astro'
+
+export type Asset = {
+  filename: string
+  alt: string
+}
 
 export type Project = {
   name: string
   architects: string
   location: string
   slug: string
-  content: ISbResult
+  content: ISbRichtext
   year: string
   photographs: string
-  cover: {
-    filename: string
-    alt: string
-  }
+  cover: Asset
 }

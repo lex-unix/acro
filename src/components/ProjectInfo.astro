@@ -1,0 +1,12 @@
+---
+export interface Props {
+  name: string
+  value: string
+}
+
+const { name, value } = Astro.props
+---
+
+<p>
+  <span class="opacity-60">{name}: {' '}</span>{value}
+</p>

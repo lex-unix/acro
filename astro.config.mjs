@@ -12,7 +12,8 @@ export default defineConfig({
       accessToken: env.STORYBLOK_TOKEN,
       components: {
         projectList: 'storyblok/ProjectList',
-        page: 'storyblok/Page'
+        page: 'storyblok/Page',
+        project: 'storyblok/Project'
       }
     })
   ]
