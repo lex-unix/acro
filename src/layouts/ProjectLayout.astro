@@ -1,15 +1,17 @@
 ---
 import Breadcrumb from '@/components/Breadcrumb.astro'
 import BaseLayout from './BaseLayout.astro'
+import type { Project } from '@/types'
 
 export interface Props {
-  title: string
+  project: Project
 }
 
-const { title } = Astro.props
+const { project } = Astro.props
+const description = `Discover ${project.name} by ${project.architects}.`
 ---
 
-<BaseLayout title={title}>
+<BaseLayout title={project.name} description={description}>
   <article class="mx-auto max-w-3xl">
     <Breadcrumb />
     <slot name="project-info" />

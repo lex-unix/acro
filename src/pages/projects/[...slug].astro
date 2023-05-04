@@ -31,7 +31,7 @@ const { data } = await sbApi.get(`cdn/stories/projects/${slug}`, {
 const project: Project = data.story.content
 ---
 
-<ProjectLayout title={project.name}>
+<ProjectLayout project={project}>
   <div class="mt-3" slot="project-info">
     <h1 class="mb-6 text-xl font-semibold">{project.name}</h1>
     <img

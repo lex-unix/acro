@@ -3,15 +3,16 @@ import Head from '@/components/Head.astro'
 
 export interface Props {
   title: string
+  description: string
 }
 
-const { title } = Astro.props
+const { title, description } = Astro.props
 ---
 
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <Head title={title} description={title} />
+    <Head title={title} description={description} />
   </head>
   <body class="text-gray-700 antialiased">
     <main class="mx-4 py-5 md:mx-6 lg:mx-8">

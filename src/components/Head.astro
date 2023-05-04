@@ -1,15 +1,16 @@
 ---
 export interface Props {
   title: string
-  description?: string
+  description: string
 }
 
-const { title, description } = Astro.props
+const { description } = Astro.props
+const title = `${Astro.props.title} | ACRO`
 ---
 
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width" />
-<title>{title} | ACRO</title>
+<title>{title}</title>
 <meta name="description" content={description} />
 <meta name="author" content="Alexey Miin" />
 <meta name="generator" content={Astro.generator} />
