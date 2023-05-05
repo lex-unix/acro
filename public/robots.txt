@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://acro.lexunix.me/sitemap-index.xml
