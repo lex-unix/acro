@@ -36,7 +36,7 @@ export default function Gallery({ images }: Props) {
       <div ref={ref}>
         <div className="absolute right-4 top-4 z-10 md:hidden">
           <button
-            onClick={close}
+            onClick={() => openAtom.set(false)}
             className="inline-flex items-center justify-center text-white"
           >
             <XMarkIcon className="h-6 w-6" />
