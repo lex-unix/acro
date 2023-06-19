@@ -3,6 +3,7 @@ import storyblok from '@storyblok/astro'
 import tailwind from '@astrojs/tailwind'
 import { loadEnv } from 'vite'
 import sitemap from '@astrojs/sitemap'
+import react from '@astrojs/react'
 
 const env = loadEnv('', process.cwd(), 'STORYBLOK')
 
@@ -18,6 +19,7 @@ export default defineConfig({
         project: 'storyblok/Project'
       }
     }),
-    sitemap()
+    sitemap(),
+    react()
   ]
 })

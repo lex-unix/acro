@@ -14,4 +14,5 @@ export type Project = {
   year: string
   photographs: string
   cover: Asset
+  gallery: Asset[]
 }
