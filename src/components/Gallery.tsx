@@ -45,6 +45,7 @@ export default function Gallery({ images }: Props) {
         <img
           src={images[$selectedIndex].filename}
           alt={images[$selectedIndex].alt}
+          className="object-contain"
         />
         <div className="absolute inset-y-0 right-2 flex w-8 items-center justify-center">
           {$selectedIndex < images.length - 1 && (
