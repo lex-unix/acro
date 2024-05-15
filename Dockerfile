@@ -10,6 +10,8 @@ RUN yarn install --pure-lockfile
 
 COPY . .
 
+RUN yarn build
+
 
 FROM nginx:alpine as runtime
 
